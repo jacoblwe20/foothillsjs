@@ -4,7 +4,7 @@ http        = require 'http'
 fs          = require 'fs'
 path        = require 'path'
 meetup      = require('./meetup-datasource.js').Meetup
-groupname   = 'riversidejs'
+groupname   = 'FoothillsJS'
 cron        = require('cron').CronJob;
 group = new meetup(groupname)
 PORT = process.env.PORT || 3000
@@ -34,6 +34,7 @@ job = new cron({
   start: false
   timeZone: "America/Los_Angeles"
 });
+
 job.start();
 
 app.configure ->
@@ -50,9 +51,6 @@ app.get '/', (req, res) ->
   group.getEvents 2, (events) ->
     #console.log(events);
     res.render 'index.jade', {events : events, info: app.locals.info}
-
-app.get '/jobs', (req, res) ->
-  res.send '<h1>Coming Soon!</h1>'
 
 app.get '/events/:id', (req, res) ->
   res.redirect('http://meetup.com/' + groupname + '/events/' + req.params.id)

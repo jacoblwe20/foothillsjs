@@ -3,7 +3,7 @@
     .span1 &nbsp;
     .span6
       div.icon_head
-        i.icon-bell
+        i.icon-curlies
       h1 
         span= info.name
       hr
@@ -15,24 +15,24 @@
       .sidebar
 
         h3 
-          i.icon-group 
+          i.icon-users 
           span Active Members
 
         ul.unstyled.members
         .more 
-          i.icon-chevron-right
+          i.icon-arrow-right
           a(href=info.link + 'members') view all #{info.members} #{info.who}
-        .chat
-          a(href="https://riverside.campfirenow.com/a3544") 
-            i.icon-comment
-            span Group Chat
+        //- .chat
+        //-   a(href="https://riverside.campfirenow.com/a3544") 
+        //-     i.icon-comment
+        //-     span Group Chat
 
   .row.who-what-when-where
     .span1 &nbsp;
     .span6
 
       h2 
-        i.icon-time
+        i.icon-clock
         span Upcoming Meetups
 
       each event, i in events
@@ -41,7 +41,7 @@
       p.upcoming-meetups
 
       h2 
-        i.icon-map-marker
+        i.icon-location
         span More Meetups
 
       p Visit the 
@@ -50,7 +50,7 @@
         
       hr
       h2
-        i.icon-bullhorn 
+        i.icon-microphone 
         span We talk about
       ul
         each topic, i in info.topics

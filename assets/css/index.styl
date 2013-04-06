@@ -1,9 +1,8 @@
 // Light Theme
-$links     = #08c;
-$icons     = #bada55; 
-$bgcolor   = #efefef;
-$type      = #444;
-
+$links     = #fefefe;
+$icons     = darken(#08c, 15); 
+$bgcolor   = #093;
+$type      = #fff;
 
 // Dark Theme
 // $links     = #08c;
@@ -12,7 +11,13 @@ $type      = #444;
 // $type      = #efefef;
 
 a 
-  color: $links;
+  color: $links!important
+  &:visited
+    color $links
+  &:hover
+    color lighten($links, 10)
+  &:active
+    color darken($links, 10)
 
 i{
   text-shadow: 0px 1px 0px rgba($type, .3);
@@ -31,6 +36,9 @@ hr
 
 p
   color: $type;
+
+h1, h2 ,h3 , h4, h5 ,h6
+  font-family "Sanchez"
 
 body 
   background-color: $bgcolor;
@@ -57,8 +65,10 @@ body
 
 h1
   font-size: 55px;
-  line-height: 50px;
-  margin-bottom: 30px;
+  line-height: 90px;
+
+  span
+    padding: 0 10px;
 
   i
     color: $icons;
@@ -110,7 +120,7 @@ a
     border-radius: 2px;
 
     i
-      color: lighten($bgcolor, 15%);
+      color: $bgcolor;
       margin: 5px 10px 0 0;
 
   .members li 
@@ -156,7 +166,7 @@ a
 .event-data
   border-radius: 4px;
   padding: 10px;
-  background-color: rgba($bgcolor, .9);
+  background-color: rgba($icons, .9);
   display: inline-block;
 
 
