@@ -1,5 +1,5 @@
 {
-  "name"	: "riversidejs",
+  "name"	: "foothillsjs",
   "version"	: "0.0.6",
   "author"	: "people",
   "main"	: "app.coffee",
@@ -11,7 +11,7 @@
     "request"		        : "latest",
     "cron"              : "latest",
     "time"              : "latest",
-    "coffee-script"     : "latest",
+    "coffee-script"     : "1.6.1",
     "connect-assets"    : "2.x.x",
     "express"           : "2.5.9",
     "gravatar"          : "latest",
