@@ -4,7 +4,7 @@
   "scripts": {
     "start": "coffee app.coffee"
   },
-  "version": "0.0.3",
+  "version": "0.0.3-1",
   "engines": {
     "node": "0.8.x"
   },
