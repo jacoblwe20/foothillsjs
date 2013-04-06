@@ -1,11 +1,12 @@
 {
   "name": "foothillsjs",
-  "version": "0.0.6",
-  "author": "people",
-  "main": "app.coffee",
+  "subdomain": "foothillsjs",
+  "scripts": {
+    "start": "coffee app.coffee"
+  },
+  "version": "0.0.3",
   "engines": {
-    "node": "0.6.18",
-    "npm": "1.1.4"
+    "node": "0.8.x"
   },
   "dependencies": {
     "request": "~2.16.6",
