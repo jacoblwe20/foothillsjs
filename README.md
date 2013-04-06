@@ -1,6 +1,4 @@
-# RiversideJS 
-
-[Riverside JS](http://riversidejs.org)
+# FoothillsJS
 
 ## Booting
 
