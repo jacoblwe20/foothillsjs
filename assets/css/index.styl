@@ -1,3 +1,6 @@
+@import 'nib'
+@import 'animations'
+
 // Light Theme
 $links     = #fefefe;
 $icons     = darken(#08c, 15); 
@@ -40,10 +43,63 @@ p
 h1, h2 ,h3 , h4, h5 ,h6
   font-family "Sanchez"
 
+
+
 body 
   background-color: $bgcolor;
   padding: 60px 0;
   color: $type;
+
+#main
+  opacity 0
+  visibility hidden
+  transition opacity 1s
+
+.loaded
+  #main
+    opacity 1
+    visibility visible
+
+.loading:before
+  font-size 30px
+  padding 60px
+  line-height 30px
+  font-family "Sanchez"
+  font-weight 700
+  content "We would love to meet you..."
+.loaded
+  .loading
+    display none
+
+@media screen and (min-width : 767px)
+
+  .loading
+    transform translate(0, 0)
+    transition transform 10s
+    max-height: 1px;
+    margin-top: -60px;
+    &:before
+      content ""
+      display none
+    .span1
+      background $icons
+      height 15px
+      border-radius 4px
+    .section1
+      animation section1 1s linear 0s infinite alternate
+    .section2
+      animation section2 1s linear 0s infinite alternate
+    .section3
+      animation section3 1s linear 0s infinite alternate
+    .section4
+      animation section4 1s linear 0s infinite alternate
+
+  .loaded
+    .loading
+      transform translate(0, -30px)
+      display block
+
+
 
 .icon_head
 
@@ -95,8 +151,7 @@ a
 
 .well
   background: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
+  box-shadow none
   padding: 5px;
   box-shadow: none;
   position: relative;
@@ -105,8 +160,15 @@ a
   background-position: right bottom;
 
 .who-what-when-where 
-  margin-top: 0px;
+  margin-top 30px
 
+.branding
+  transform translate(-50px, 0)
+  transition transform 1s ease-out
+
+.loaded
+  .branding
+    transform translate(0, 0)
 
 // sidebar
 .sidebar 
@@ -135,7 +197,7 @@ a
     padding: 0;
 
     &.ready
-      -webkit-transition: height .5s ease-out, padding .3s ease-out;
+      transition: height .5s ease-out, padding .3s ease-out;
       height: auto;
       padding: 5px 10px;
 
@@ -149,8 +211,6 @@ a
       height: 16px;
       margin-top: -5px;
       margin-right: 5px;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
       border-radius: 3px;
 
   div
@@ -253,7 +313,7 @@ a
       padding: 0;
 
       &.ready
-        -webkit-transition: width .5s ease-out, padding .3s ease-out;
+        transition: width .5s ease-out, padding .3s ease-out;
         width: auto;
         padding: 2px;
 

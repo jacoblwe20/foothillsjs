@@ -4,12 +4,13 @@
  *  _ __ ___   _____ _ __ ___ _  __| | ___ _ ___ 
  * | '__| \ \ / / _ \ '__/ __| |/ _` |/ _ \ / __|
  * | |  | |\ V /  __/ |  \__ \ | (_| |  __/ \__ \
- * |_|  |_| \_/ \___|_|  |___/_|\__,_|\___| |___/
+ * |_|  |_| \_/ \___|_|  |___/_|\__,_|\___| |___/ ... and now foothillsjs
  *                                       _/ |    
  *                                      |__/
  * =================================================
  * Ascii art by Hubot :)
- * Code by Members of RiversideJS.org
+ * Code by Jacob Lowe -> So far get your name here VVVVV
+ * https://github.com/jacoblwe20/foothillsjs
  */
 
 jQuery(function($, _) {
@@ -103,15 +104,13 @@ jQuery(function($, _) {
         var that = $(this),
             venue = that.data().venue,
             time = that.find('.time');
-
-            //console.log(venue);
-
             build.image(venue, i);
             time.html(build.parseTime(time.data().time));
       });
 
       build.members(function(res){
 
+        
         var memberlist = $('.members'),
           members = _.sortBy(res, function(member){ return -member.activity; }),
           current = 0,
@@ -124,6 +123,7 @@ jQuery(function($, _) {
               setTimeout(next ,100);
             }
           };
+          $("html").addClass("loaded");
 
           for(var i in members){
             if (i < 15) {
@@ -131,7 +131,10 @@ jQuery(function($, _) {
 
               if(member.photo !== null)
                 memberlist.append(member_template(member));
+
+
             }
+
           }
           next();
       });

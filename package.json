@@ -7,7 +7,7 @@
   "scripts": {
     "start": "coffee app.coffee"
   },
-  "version": "0.0.7-1",
+  "version": "0.0.7-2",
   "engines": {
     "node": "0.8.x"
   },
@@ -21,6 +21,7 @@
     "gravatar": "~1.0.6",
     "jade": "~0.28.2",
     "stylus": "~0.32.1",
-    "formidable": "~1.0.13"
+    "formidable": "~1.0.13",
+    "nib": "~0.9.1"
   }
 }

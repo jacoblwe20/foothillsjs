@@ -1,35 +1,15 @@
 #index
-  .row
-    .span1 &nbsp;
-    .span6
-      div.icon_head
-        i.icon-curlies
-      h1 
-        span= info.name
-      hr
-
-      div.description!= info.description
-
-    .span1 &nbsp;
-    .span4
-      .sidebar
-
-        h3 
-          i.icon-users 
-          span Active Members
-
-        ul.unstyled.members
-        .more 
-          i.icon-arrow-right
-          a(href=info.link + 'members') view all #{info.members} #{info.who}
-        //- .chat
-        //-   a(href="https://riverside.campfirenow.com/a3544") 
-        //-     i.icon-comment
-        //-     span Group Chat
-
   .row.who-what-when-where
     .span1 &nbsp;
     .span6
+      .branding
+        div.icon_head
+          i.icon-curlies
+        h1 
+          span= info.name
+      hr
+
+      div.description!= info.description
 
       h2 
         i.icon-clock
@@ -56,4 +36,21 @@
         each topic, i in info.topics
           li= topic.name
 
-      p &nbsp;    
+      p &nbsp; 
+
+    .span1 &nbsp;
+    .span4
+      .sidebar
+
+        h3 
+          i.icon-users 
+          span Active Members
+
+        ul.unstyled.members
+        .more 
+          i.icon-arrow-right
+          a(href=info.link + 'members') view all #{info.members} #{info.who}
+        //- .chat
+        //-   a(href="https://riverside.campfirenow.com/a3544") 
+        //-     i.icon-comment
+        //-     span Group Chat   
