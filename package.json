@@ -7,7 +7,7 @@
   "scripts": {
     "start": "coffee app.coffee"
   },
-  "version": "0.0.7-2",
+  "version": "0.0.8",
   "engines": {
     "node": "0.8.x"
   },
